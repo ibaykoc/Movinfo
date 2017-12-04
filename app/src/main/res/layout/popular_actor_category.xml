@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:padding="4dp"
+            android:id="@+id/popular_actor_picture"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/bottom_bar"
+            app:layout_constraintBottom_toTopOf="@id/popular_actor_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="8" />
+
+
+        <TextView
+            android:id="@+id/popular_actor_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:ellipsize="marquee"
+            android:gravity="center|top"
+            android:singleLine="true"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popular_actor_picture"
+            app:layout_constraintVertical_weight="2"
+            tools:text="Henry Cavill" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.koc.movinfo.MovieMoreActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true">
+
+        <!--Backdrop part-->
+        <ImageView
+            android:id="@+id/movie_more_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:contentDescription="@string/movie_backdrop_content_description"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/test_backdrop" />
+        <!--End backdrop part-->
+
+        <!--Title background part-->
+        <View
+            android:id="@+id/movie_more_title_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/movie_more_productionCompanies"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_backdrop" />
+        <!--Poster part-->
+        <ImageView
+            android:id="@+id/movie_more_poster"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/screen_background_light"
+            android:transitionName="poster"
+            android:contentDescription="@string/movie_poster_content_description"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_poster"
+            app:layout_constraintBottom_toBottomOf="@id/movie_more_poster_guideline_bottom"
+            app:layout_constraintDimensionRatio="W,4:6"
+            app:layout_constraintEnd_toEndOf="@id/movie_more_poster_guideline_end"
+            app:layout_constraintStart_toStartOf="@id/movie_more_poster_guideline_start"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_backdrop" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/movie_more_poster_guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="160dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/movie_more_poster_guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="400dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/movie_more_poster_guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.01" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/movie_more_poster_guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".3" />
+
+        <!--Title-->
+        <TextView
+            android:id="@+id/movie_more_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="2"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="16"
+            app:layout_constraintStart_toEndOf="@id/movie_more_poster"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_backdrop"
+            tools:ignore="RtlSymmetry"
+            tools:text="Spiderman- Homecoming" />
+
+        <!--Release date-->
+        <TextView
+            android:id="@+id/movie_more_releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@id/movie_more_title"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_title"
+            tools:text="July 2017" />
+
+        <!--Runtime-->
+        <TextView
+            android:id="@+id/movie_more_runtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toEndOf="@id/movie_more_releaseDate"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_title"
+            tools:text="133 minutes" />
+
+        <!--Genre-->
+        <TextView
+            android:id="@+id/movie_more_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:singleLine="true"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/movie_more_title"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_releaseDate"
+            tools:text="Action, Drama, Horror" />
+
+        <!--Rating-->
+        <TextView
+            android:id="@+id/movie_more_rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/movie_more_title"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_genre"
+            tools:text="Rating: 7.5" />
+
+        <!--Production Companies-->
+        <TextView
+            android:id="@+id/movie_more_productionCompanies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/movie_more_title"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_rating"
+            tools:text="Walt Disney Pictures, Marvel Studios" />
+        <!--poster_imagester part-->
+
+        <!--Overview-->
+        <TextView
+            android:id="@+id/movie_more_overview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_poster"
+            tools:text="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela." />
+
+        <TextView
+            android:id="@+id/movie_more_trailer_category_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/screen_background_light"
+            android:elevation="4dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="12dp"
+            android:text="@string/movie_more_trailer_category_title_text"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_overview" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/movie_more_trailer_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_trailer_category_title" />
+
+        <TextView
+            android:id="@+id/movie_more_trailer_category_cast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/screen_background_light"
+            android:elevation="4dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="12dp"
+            android:text="@string/movie_more_trailer_category_cast_text"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_trailer_recyclerView" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/movie_more_cast_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_trailer_category_cast" />
+
+        <TextView
+            android:id="@+id/movie_more_similar_category_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/screen_background_light"
+            android:elevation="4dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="12dp"
+            android:text="@string/movie_more_similar_category_title_text"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_cast_recyclerView" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/movie_more_similar_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:layout_constraintTop_toBottomOf="@id/movie_more_similar_category_title" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

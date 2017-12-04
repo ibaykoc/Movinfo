@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Movinfo</string>
+
+    <string name="popular_category_title_text">Popular Movie</string>
+    <string name="now_playing_category_title_text">Now Playing</string>
+    <string name="upcoming_category_title_text">Upcoming Movie</string>
+
+    <string name="movie_runtime">%1$d minutes</string>
+    <string name="rating">Rating: %1$.1f</string>
+
+    <string name="movie_more_trailer_category_title_text">Trailer</string>
+
+
+    <string name="insert_movie_name_edit_text">Insert Movie Name</string>
+
+    <string name="total_movie_found">Total Movie Found: %1$d</string>
+    <string name="imageButton_search_movie_todo">Search movie based on text value in insert_movie_name_edittext</string>
+    <string name="button_next_movie_search">Next</string>
+    <string name="button_prev_movie_search">Previous</string>
+    <string name="movie_poster_content_description">Movie poster</string>
+    <string name="movie_backdrop_content_description">Movie backdrop</string>
+    <string name="button_more">More</string>
+
+    <!--Youtube API-->
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+    <string name="video_thumbnail">Video thumbnail</string>
+    <string name="video_play_button">Video play button</string>
+    <string name="movie_more_trailer_category_cast_text">Cast</string>
+    <string name="movie_more_similar_category_title_text">Similar Movie</string>
+</resources>

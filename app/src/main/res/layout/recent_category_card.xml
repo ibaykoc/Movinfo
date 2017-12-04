@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popular_movie_category_card"
+    android:layout_width="160dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/recent_category_constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Poster shrink part-->
+        <ImageView
+            android:id="@+id/recent_category_card_poster"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/movie_poster_content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/recent_category_card_top_part_guideline_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/test_poster" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/popular_movie_category_title_background"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="100dp"
+            app:layout_constraintBottom_toTopOf="@id/recent_category_card_top_part_guideline_bottom" />
+
+        <TextView
+            android:id="@+id/recent_category_card_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/recent_category_card_top_part_guideline_bottom"
+            tools:text="Spiderman-Homecoming" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/recent_category_card_top_part_guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+        <!--End poster shrink part-->
+
+        <!--Enlarge part-->
+        <!--Title enlarge-->
+        <TextView
+            android:id="@+id/recent_category_card_title_enlarge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:maxLines="2"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/recent_category_card_runtime_enlarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recent_category_card_top_part_guideline_bottom"
+            app:layout_constraintVertical_weight="5"
+            tools:text="Spiderman- Homecoming" />
+
+        <!--Runtime enlarge-->
+        <TextView
+            android:id="@+id/recent_category_card_runtime_enlarge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="marquee"
+            android:gravity="start"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toTopOf="@id/recent_category_card_genre_enlarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recent_category_card_title_enlarge"
+            app:layout_constraintVertical_weight="2"
+            tools:text="133 minutes" />
+
+        <!--Genre enlarge-->
+        <TextView
+            android:id="@+id/recent_category_card_genre_enlarge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:maxLines="2"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@id/recent_category_card_overview_enlarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recent_category_card_runtime_enlarge"
+            app:layout_constraintVertical_weight="2"
+            tools:text="Action, Drama, Horror" />
+
+        <!--Overview enlarge-->
+        <TextView
+            android:id="@+id/recent_category_card_overview_enlarge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="start"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/recent_category_card_rating_enlarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recent_category_card_genre_enlarge"
+            app:layout_constraintVertical_weight="14"
+            tools:text="Overview Test" />
+
+        <!--Rating enlarge bottom-->
+        <TextView
+            android:id="@+id/recent_category_card_rating_enlarge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/recent_category_card_bottom_part_guideline_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recent_category_card_overview_enlarge"
+            app:layout_constraintVertical_weight="2"
+            tools:text="Rating: 7.7" />
+        <!--End enlarge part-->
+
+        <!--Bottom part-->
+        <android.support.constraint.Guideline
+            android:id="@+id/recent_category_card_bottom_part_guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <!--Release date shrink-->
+        <TextView
+            android:id="@+id/recent_category_card_release_date"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="marquee"
+            android:gravity="center|top"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@id/recent_category_card_bottom_part_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recent_category_card_bottom_part_guideline_top"
+            tools:text="2017-08-06" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/recent_category_card_bottom_part_divider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1" />
+
+        <!--More button enlarge-->
+        <Button
+            android:id="@+id/recent_category_card_button_more_enlarge"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:foreground="?android:selectableItemBackground"
+            android:text="@string/button_more"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recent_category_card_bottom_part_divider" />
+        <!--End bottom part-->
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

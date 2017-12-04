@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popular_movie_category_card"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintHeight_default="wrap">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/popular_category_constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Backdrop part-->
+        <ImageView
+            android:id="@+id/popular_category_card_backdrop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/movie_backdrop_content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/popular_category_card_backdrop_guideline_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="8"
+            tools:src="@drawable/test_backdrop" />
+
+        <!--Foreground gradient-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/popular_movie_category_title_background"
+            app:layout_constraintBottom_toTopOf="@id/popular_category_card_backdrop_guideline_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Title backdrop-->
+        <TextView
+            android:id="@+id/popular_category_card_title_shrink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:paddingBottom="8dp"
+            android:paddingStart="8dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/popular_category_card_backdrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="16"
+            app:layout_constraintStart_toEndOf="@id/popular_category_card_poster"
+            tools:ignore="RtlSymmetry"
+            tools:text="Spiderman- Homecoming" />
+
+        <!--Backdrop bottom guideline-->
+        <android.support.constraint.Guideline
+            android:id="@+id/popular_category_card_backdrop_guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1" />
+        <!--End backdrop part-->
+
+        <!--Enlarge part-->
+        <!--Title enlarge-->
+        <TextView
+            android:id="@+id/popular_category_card_title_enlarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="2"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="16"
+            app:layout_constraintStart_toEndOf="@id/popular_category_card_poster"
+            app:layout_constraintTop_toTopOf="@id/popular_category_card_backdrop_guideline_bottom"
+            tools:ignore="RtlSymmetry"
+            tools:text="Spiderman- Homecoming" />
+
+        <!--Release date enlarge-->
+        <TextView
+            android:id="@+id/popular_category_card_releaseDate_enlarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/popular_category_card_title_enlarge"
+            app:layout_constraintTop_toBottomOf="@id/popular_category_card_title_enlarge"
+            tools:text="July 2017" />
+
+        <!--Runtime enlarge-->
+        <TextView
+            android:id="@+id/popular_category_card_runtime_enlarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/popular_category_card_releaseDate_enlarge"
+            app:layout_constraintTop_toBottomOf="@id/popular_category_card_title_enlarge"
+            tools:text="133 minutes" />
+
+        <!--Genre enlarge-->
+        <TextView
+            android:id="@+id/popular_category_card_genre_enlarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/popular_category_card_title_enlarge"
+            app:layout_constraintTop_toBottomOf="@id/popular_category_card_releaseDate_enlarge"
+            tools:text="Action, Drama, Horror" />
+
+        <!--Overview enlarge-->
+        <TextView
+            android:id="@+id/popular_category_card_overview_enlarge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@id/popular_category_card_enlarge_guideline_bottom_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popular_category_card_poster_guideline_bottom"
+            tools:text="Overview Test" />
+
+        <!--Guideline bottom enlarge divider-->
+        <android.support.constraint.Guideline
+            android:id="@+id/popular_category_card_enlarge_guideline_bottom_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1" />
+
+        <!--Rating enlarge bottom-->
+        <TextView
+            android:id="@+id/popular_category_card_rating_enlarge"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/popular_category_card_enlarge_guideline_bottom_divider" />
+
+        <!--More button enlarge-->
+        <Button
+            android:id="@+id/popular_category_card_button_more_enlarge"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:foreground="?android:selectableItemBackground"
+            android:text="@string/button_more"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/popular_category_card_enlarge_guideline_bottom_divider" />
+        <!--End enlarge part-->
+
+        <!--Poster part-->
+        <ImageView
+            android:id="@+id/popular_category_card_poster"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:transitionName="poster"
+            android:background="@android:drawable/screen_background_light"
+            android:contentDescription="@string/movie_poster_content_description"
+            android:elevation="4dp"
+            android:foreground="?android:selectableItemBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/popular_category_card_poster_guideline_bottom"
+            app:layout_constraintDimensionRatio="W,4:6"
+            app:layout_constraintEnd_toEndOf="@id/popular_category_card_poster_guideline_end"
+            app:layout_constraintStart_toStartOf="@id/popular_category_card_poster_guideline_start"
+            app:layout_constraintTop_toTopOf="@id/popular_category_card_poster_guideline_top"
+            tools:src="@drawable/test_poster" />
+
+        <!--Poster guidelines-->
+        <android.support.constraint.Guideline
+            android:id="@+id/popular_category_card_poster_guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/popular_category_card_poster_guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/popular_category_card_poster_guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/popular_category_card_poster_guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
